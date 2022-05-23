@@ -1,9 +1,11 @@
 import React, { useState, FC } from "react";
 
-export const TodoForm: FC<{ onSubmit: (item: any) => void }> = (
-  TodoFormProps
-) => {
-  const { onSubmit } = TodoFormProps;
+type todoFormprops = {
+  onSubmit: ({ id, text }: { id: number; text: string }) => void;
+};
+
+export const TodoForm: FC<todoFormprops> = (props) => {
+  const { onSubmit } = props;
   const [input, setInput] = useState("");
 
   const handleChange = (e: any) => {
@@ -13,10 +15,10 @@ export const TodoForm: FC<{ onSubmit: (item: any) => void }> = (
   const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
 
-    onSubmit({
-      id: Math.floor(Math.random() * 100000),
-      text: input,
-    });
+    // onSubmit({
+    //   id: Math.floor(Math.random() * 100000),
+    //   text: input,
+    // });
     setInput("");
   };
 
