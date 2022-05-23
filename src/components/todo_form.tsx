@@ -15,10 +15,10 @@ export const TodoForm: FC<todoFormprops> = (props) => {
   const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
 
-    // onSubmit({
-    //   id: Math.floor(Math.random() * 100000),
-    //   text: input,
-    // });
+    onSubmit({
+      id: Math.floor(Math.random() * 100000),
+      text: input,
+    });
     setInput("");
   };
 
