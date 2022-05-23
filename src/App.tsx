@@ -1,11 +1,5 @@
-import { Text } from "@chakra-ui/react";
-import { TodoList } from "./components/todo_list";
+import "./App.css";
 
 export const App = () => {
-  return (
-    <>
-      <Text align={"center"}>ToDo App</Text>
-      <TodoList />
-    </>
-  );
+  return <div className="App">aaaa</div>;
 };
